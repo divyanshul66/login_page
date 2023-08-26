@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/a8162db7fd.js"
+      crossorigin="anonymous">
+    </script>
+    <!-- <link href="style.css" type="text/css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .formstyle{
+            align-items: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function myfun()
+            {
+                var numb=document.getElementById("mobile").value;
+                if (numb==""){
+        document.getElementById("message").innerHTML="** please fill mobile";
+      }
+      if (isNaN(numb))
+      {
+        document.getElementById("message").innerHTML="** Enter only numeric value";
+        return false;
+      }
+      if (numb.length<10){
+        document.getElementById("message").innerHTML="** Mobile number should be 10 digit";
+      }
+      if (numb.length>10){
+        document.getElementById("message").innerHTML="** Mobile number should be 10 digit";
+      }
+            }
+    </script>
+    <div class="container">
+        <form  onsubmit="return myfun()">
+            <div class="input-box"><br><br><br><br>
+                <span class="details required">Contact No. </span>
+                <span id="message"></span>
+                <br>
+                <input type="text" id="mobile" value="">
+                <span id="message"></span>
+              </div><br>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+        </div></body>
+</html>
